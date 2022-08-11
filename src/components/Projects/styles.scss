@@ -1,0 +1,178 @@
+@use "../../styles/config";
+
+.box {
+  width: 100%;
+  padding: 4em 0 4em 0;
+  background-color: config.$background-light-grey;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    color: config.$color-emphasis-light;
+    font-weight: config.$font-weight-b;
+  }
+
+  h3 {
+    font-family: config.$font-family;
+    font-size: config.$font-size-m;
+    color: config.$color-light-primary;
+    font-weight: config.$font-weight-sans-b;
+
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-family: config.$font-family;
+    font-size: config.$font-size-body-x;
+    color: config.$color-light-primary;
+
+    margin-bottom: 30px;
+  }
+
+  .projects-rocketseat {
+    width: 900px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: config.$font-family;
+
+    span {
+      font-size: config.$font-size-p;
+      color: config.$color-light-primary;
+      margin-bottom: 1em;
+    }
+
+    .projects-rocketseat_content {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+
+      .projects-rocketseat_carousel {
+        width: 60%;
+        margin-right: 1.8em;
+      }
+
+      .projects-rocketseat_text {
+        width: 40%;
+
+        span {
+          font-family: config.$font-family;
+          font-size: config.$font-size-p;
+          color: config.$color-light-primary;
+          margin-bottom: 0.5em;
+        }
+
+        p {
+          font-family: config.$font-family;
+          font-size: config.$font-size-body-m;
+          color: config.$color-light-secondary;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .divisor {
+    width: 40%;
+    height: 2px;
+    background-color: config.$color-dark-primary;
+    margin: 3em 0 3em 0;
+  }
+
+  .projects-alura {
+    width: 900px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: config.$font-family;
+
+    .alura-imersao-dev {
+      width: 100%;
+
+      p {
+        margin-top: 0.6em;
+      }
+
+      span {
+        font-size: config.$font-size-p;
+        color: config.$color-light-primary;
+        margin-bottom: 1em;
+      }
+    }
+
+    .alura-certificate {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3em;
+
+      span {
+        font-size: config.$font-size-p;
+        color: config.$color-light-primary;
+        margin-bottom: 1em;
+      }
+
+      .certificate_content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    .alura-imersao-dev_content {
+      background-color: config.$background-light-default;
+      box-shadow: config.$box-shadow-center;
+
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .imersao_content_text {
+      padding: 1em 3em;
+
+      .content_text {
+        font-size: config.$font-size-body-x;
+        color: config.$color-light-primary;
+        font-weight: config.$font-weight-b;
+        margin-bottom: 0.5em;
+      }
+
+      .content_text-two {
+        font-size: config.$font-size-body-m;
+        color: config.$color-light-secondary;
+      }
+    }
+  }
+
+  .projects-link-codepen {
+    margin-top: 3em;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: config.$color-emphasis-light;
+      font-size: config.$font-size-body-x;
+      font-weight: config.$font-weight-m;
+
+      a {
+        margin-left: 10px;
+      }
+
+      svg path {
+        fill: config.$color-emphasis-light;
+      }
+    }
+  }
+}

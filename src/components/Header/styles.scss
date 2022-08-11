@@ -1,0 +1,56 @@
+  @use "../../styles/config";
+
+  .header {
+    height: 70px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    background: config.$background-light-default;
+    z-index: 1;
+    box-shadow: config.$box-shadow-center;
+
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+
+    
+    .code-symbol img {
+      width: 40px;
+    }
+
+    .list-menu{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0;
+      
+      li {
+        list-style: none;
+        margin-right: 2em;
+        font-family: config.$font-family;
+        color: config.$color-light-secondary;
+        font-weight: config.$font-weight-m;
+        font-size: config.$font-size-body-x;
+        cursor: pointer;
+        transition: all .6s;
+      }
+
+      li:last-child{
+        margin-right: 0;
+      }
+
+      li:hover{
+        color: config.$color-emphasis-light;
+        font-weight: config.$font-weight-b;
+      }
+
+      li:active{
+        color: config.$color-emphasis-light;
+        font-weight: config.$font-weight-b;
+      }
+    }
+  }
