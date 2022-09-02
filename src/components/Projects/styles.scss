@@ -21,6 +21,7 @@
     color: config.$color-light-primary;
     font-weight: config.$font-weight-sans-b;
 
+    margin-top: 0;
     margin-bottom: 20px;
   }
 
@@ -30,6 +31,7 @@
     color: config.$color-light-primary;
 
     margin-bottom: 30px;
+    margin-top: 0;
   }
 
   .projects-rocketseat {
@@ -48,33 +50,82 @@
     }
 
     .projects-rocketseat_content {
+      width: 100%;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
       justify-content: center;
 
       .projects-rocketseat_carousel {
-        width: 60%;
+        width: 55%;
         margin-right: 1.8em;
       }
 
-      .projects-rocketseat_text {
-        width: 40%;
+      .rocketseat_content_text {
+        width: 45%;
 
-        span {
+        .rocketseat_content_text_span {
           font-family: config.$font-family;
           font-size: config.$font-size-p;
           color: config.$color-light-primary;
-          margin-bottom: 0.5em;
         }
 
-        p {
+        .rocketseat_content_text_p {
           font-family: config.$font-family;
           font-size: config.$font-size-body-m;
           color: config.$color-light-secondary;
           margin-bottom: 0;
+          margin-top: 0.8em;
+        }
+
+        .rocketseat_content_github {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-top: 1.4em;
+          padding: 5px 10px;
+          text-decoration: none;
+          white-space: nowrap;
+          border-radius: config.$border-radius-p;
+          width: 50%;
+          transition: 0.5s;
+
+          .rocketseat_content_icon {
+            width: 2.6em;
+          }
+
+          .rocketseat_content_github_p {
+            margin-bottom: 0;
+            margin-left: 10px;
+
+            font-family: config.$font-family;
+            font-size: config.$font-size-body-m;
+            color: config.$color-light-secondary;
+          }
+        }
+
+        .rocketseat_content_github:hover {
+          background-color: config.$background-light-clear;
         }
       }
+    }
+  }
+
+  .rocketseat_carousel_img {
+    width: 100%;
+  }
+
+  .fade-in-image {
+    animation: fadeIn 1.5s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 
@@ -157,7 +208,16 @@
   }
 
   .projects-link-codepen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-top: 3em;
+    padding: 1em 1em;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: config.$border-radius-p;
+    transition: 0.5s;
+
     span {
       display: flex;
       align-items: center;
@@ -165,14 +225,12 @@
       color: config.$color-emphasis-light;
       font-size: config.$font-size-body-x;
       font-weight: config.$font-weight-m;
-
-      a {
-        margin-left: 10px;
-      }
-
-      svg path {
-        fill: config.$color-emphasis-light;
-      }
+      margin-right: 1em;
     }
+  }
+
+  .projects-link-codepen:hover {
+    background-color: config.$background-light-clear;
+
   }
 }
