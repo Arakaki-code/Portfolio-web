@@ -4,13 +4,13 @@
     padding: 10px;
     background-color: config.$background-light-default;
     border-radius: config.$border-radius-m;
-    box-shadow: config.$box-shadow-p;
     font-family: config.$font-family;
 
     height: 180px;
     width: 140px;
     margin-right: 1em;
     cursor: pointer;
+    transition: 0.3s;
 
     .card-box_content {
         height: 100%;
@@ -36,7 +36,6 @@
 }
 
 .card-box:hover {
-    border: 1px solid config.$color-emphasis-light;
-    box-shadow: none;
+    box-shadow: config.$box-shadow-p;
 
 }

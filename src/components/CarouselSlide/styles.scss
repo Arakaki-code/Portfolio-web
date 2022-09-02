@@ -1,0 +1,79 @@
+@use "../../styles/config";
+
+.carousel {
+  overflow: hidden;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.carousel-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin: 5px;
+    border: none;
+    background-color: #C6C2C2;
+
+  }
+
+  button.active {
+    background-color: config.$color-emphasis-light;
+    color: #fff;
+  }
+
+  .indicators-arrow {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 160px;
+
+    button {
+      background: transparent;
+
+      
+    }
+  }
+
+  .indicators-ball {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    .indicators-ball_item {
+      height: 15px;
+      border-radius: 100%;
+      width: 15px;
+      cursor: pointer;
+    }
+
+
+  }
+
+  
+}
+
+indicators-arrow-path {
+  width: 45px;
+  cursor: pointer;
+
+}
+
+indicators-arrow-path, path:hover {
+  fill: #000000;
+
+  
+}
