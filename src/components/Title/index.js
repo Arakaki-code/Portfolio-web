@@ -3,7 +3,7 @@ import React from "react";
 
 function Title(props) {
   return (
-    <div className="box-title">
+    <div className="content">
       <div></div>
       <span>{props.title}</span>
       <div></div>
