@@ -1,0 +1,111 @@
+@use "../../styles/config";
+
+.container-ability {
+  width: 100%;
+  padding: 4em 0 4em 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: config.$background-light-clear;
+}
+
+.content-ability {
+  width: 1000px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-ability_box {
+  width: 80%;
+
+  .ability-skill_icon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 2em;
+  }
+
+  .ability_icons {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2em;
+    background-color: config.$color-light-secondary;
+    margin-right: 1em;
+    transition: 0.5s;
+
+    img {
+      width: 30px;
+    }
+  }
+
+  .ability_icons:hover{
+    filter: brightness(140%);
+  }
+
+
+  .active{
+    background: #F75421;
+  }
+
+  .ability-skill_text {
+    
+
+    .skill_text_item {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  
+      background-color: config.$background-light-default;
+      padding: 1.4em 1.4em;
+      border-radius: config.$border-radius-m;
+      box-shadow: config.$box-shadow-center;
+  
+      font-family: config.$font-family-sans;
+
+      span {
+        font-size: config.$font-size-p;
+        color: config.$color-light-secondary;
+        font-weight: config.$font-weight-b;
+
+        margin-bottom: 1em;
+      }
+
+      p {
+        font-size: config.$font-size-body-m;
+        color: config.$color-light-primary;
+        font-weight: config.$font-weight-sans-r;
+
+        margin: 0;
+      }
+    }
+
+    .ability-fade-in-down {
+      
+      opacity: 0;
+      animation: fadeIn 0.5s ease-in both;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+}

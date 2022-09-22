@@ -4,6 +4,7 @@ import React from 'react'
 import Outset from './components/Outset';
 import OutsetAbout from './components/OutsetAbout';
 import { Projects } from './components/Projects';
+import Ability from './components/Ability';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Outset />
         <OutsetAbout />
         <Projects />
+        <Ability />
       </main>
     </>
 

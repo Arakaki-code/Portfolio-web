@@ -10,7 +10,7 @@ export function Projects() {
 
   return (
     <div className="box">
-      <Title title="Projetos" />
+      <Title title="Portfólio" />
       <section className="projects-rocketseat">
         <h3>Rocketseat</h3>
         <p>
