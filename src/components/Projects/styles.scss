@@ -117,15 +117,17 @@
   }
 
   .fade-in-image {
-    animation: fadeIn 1.5s;
+    animation: bounce 1s;
   }
 
-  @keyframes fadeIn {
+  @keyframes bounce {
     0% {
       opacity: 0;
+      transform: translateX(3vw);
     }
     100% {
       opacity: 1;
+      transform: translateX(0);
     }
   }
 
