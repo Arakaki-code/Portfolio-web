@@ -1,0 +1,124 @@
+@use "../../styles/config";
+
+.container-contact {
+  width: 100%;
+  padding: 4em 0 4em 0;
+
+  background-color: config.$background-light-emphasis;
+}
+
+.content-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content-contact_box {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: row;
+
+  font-family: config.$font-family;
+}
+
+.contact_box_info {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .info-data_list {
+    padding: 0;
+    margin-bottom: 2.3em;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      list-style: none;
+      margin-bottom: 0.8em;
+      color: config.$color-light-primary;
+      font-weight: config.$font-weight-m;
+      font-size: config.$font-size-body-x;
+
+      img {
+        margin-right: 0.6em;
+      }
+    }
+
+    .info-data_email a {
+      color: config.$color-light-primary;
+      text-decoration: none;
+    }
+    .info-data_telephone a {
+      color: config.$color-light-primary;
+      text-decoration: none;
+    }
+  }
+
+  .info-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    .info-link_icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-right: 3em;
+    }
+
+    .info-link_qrcode img {
+      width: 8em;
+    }
+  }
+}
+
+.contact_box_form {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .form-text-span {
+    color: config.$color-emphasis-light;
+    font-size: config.$font-size-p;
+    margin-bottom: 1.20em;
+  }
+
+  .box_form {
+
+    label {
+        display: none;
+    }
+
+    input {
+        width: 25em;
+        height: 2.5em;
+        margin-bottom: 1em;
+        padding-left: 0.9em;
+        border: none;
+        border-radius: config.$border-radius-p;
+        box-shadow: config.$box-shadow-center;
+    }
+
+    textarea {
+        width: 25em;
+        height: 5em;
+        margin-bottom: 1em;
+        padding-left: 0.9em;
+        padding-top: 0.9em;
+        border: none;
+        border-radius: config.$border-radius-p;
+        box-shadow: config.$box-shadow-center;
+    }
+  }
+}

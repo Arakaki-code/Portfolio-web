@@ -11,8 +11,6 @@
 }
 
 .content-ability {
-  width: 1000px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +18,6 @@
 }
 
 .content-ability_box {
-  width: 80%;
 
   .ability-skill_icon {
     width: 100%;
@@ -48,30 +45,28 @@
     }
   }
 
-  .ability_icons:hover{
+  .ability_icons:hover {
     filter: brightness(140%);
   }
 
-
-  .active{
-    background: #F75421;
+  .active {
+    background: #f75421;
   }
 
   .ability-skill_text {
-    
+    width: 800px;
 
     .skill_text_item {
-
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-  
+
       background-color: config.$background-light-default;
       padding: 1.4em 1.4em;
       border-radius: config.$border-radius-m;
       box-shadow: config.$box-shadow-center;
-  
+
       font-family: config.$font-family-sans;
 
       span {
@@ -92,7 +87,6 @@
     }
 
     .ability-fade-in-down {
-      
       opacity: 0;
       animation: fadeIn 0.5s ease-in both;
     }

@@ -1,3 +1,4 @@
+import UIButton from "../UIButton";
 import "./styles.scss";
 
 function Outset() {
@@ -8,7 +9,7 @@ function Outset() {
           <span>Olá, me chamo</span>
           <h1>Mayuri Cristina Arakaki</h1>
           <p>Desenvolvedora web | Front-end</p>
-          <div className="button-cv"></div>
+          <UIButton component={'a'} href="/mayuri_cv2022.pdf" download="Curriculum-mayuri" target={"blank"}>Baixar CV</UIButton>
         </div>
       </div>
 

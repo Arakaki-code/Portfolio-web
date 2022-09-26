@@ -27,14 +27,16 @@ export function Projects() {
             <CarouselSlide onClick={(value) => setActiveIndex(value)}>
               <CarouselItem>
                 <img
+                  src="/img/rocketseat-project-gif.gif"
                   className="rocketseat_carousel_img"
-                  src="./img/rocketseat-project-gif.gif"
+                  alt="portfolio-gif"
                 />
               </CarouselItem>
               <CarouselItem>
                 <img
+                  src="/img/doe-gif.gif"
                   className="rocketseat_carousel_img"
-                  src="./img/doe-gif.gif"
+                  alt="doe-gif"
                 />
               </CarouselItem>
             </CarouselSlide>
