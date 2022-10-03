@@ -9,7 +9,7 @@ export const CarouselItem = ({ children, width }) => {
   );
 };
 
-const CarouselSlide = ({ children, onClick }) => {
+const CarouselSlide = ({ children, onClick, isDark }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
@@ -74,7 +74,7 @@ const CarouselSlide = ({ children, onClick }) => {
             </svg>
           </button>
         </div>
-        <div className="indicators-ball">
+        <div className={["indicators-ball",  isDark ? "dark" : ""].join(" ")}>
           {React.Children.map(children, (child, index) => {
             return (
               <button

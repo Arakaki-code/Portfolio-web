@@ -1,9 +1,10 @@
 import UIButton from "../UIButton";
 import "./styles.scss";
 
-function Outset() {
+function Outset(props) {
+  const {isDark} = props;
   return (
-    <div className="outset">
+    <div style={isDark ? {backgroundColor:'#252A32'}: {backgroundColor:'#F2F2F2'}} className={[(isDark ? "dark" : ""),"outset"].join(" ")} id="first">
       <div className="outset-apresentation">
         <div>
           <span>Olá, me chamo</span>
@@ -14,7 +15,7 @@ function Outset() {
       </div>
 
       <div className="outset-my-photo">
-        <img src="/img/my-photo-light.svg" alt="" />
+        {isDark ? <img src="/img/my-photo-dark.svg" alt="myPhoto" /> : <img src="/img/my-photo-light.svg" alt="myPhoto" />}
       </div>
     </div>
   );

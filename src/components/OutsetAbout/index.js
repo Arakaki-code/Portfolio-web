@@ -1,9 +1,11 @@
 import "./styles.scss";
 
 
-function OutsetAbout() {
+function OutsetAbout(props) {
+  const {isDark} = props;
+
   return (
-    <div className="box-about">
+    <div style={isDark ? {backgroundColor:'#4E3172'}: {backgroundColor:'#F7C4D2'}} className={["box-about", (isDark ? "dark" : "")].join(" ")} id="about">
       <div className="triangle-div"></div>
       <div className="about">
         <div className="about-content">

@@ -1,6 +1,6 @@
 import "./App.scss";
 import Header from "./components/Header";
-import React from "react";
+import React, { useState } from "react";
 import Outset from "./components/Outset";
 import OutsetAbout from "./components/OutsetAbout";
 import { Projects } from "./components/Projects";
@@ -9,16 +9,17 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
+  const [isDark, setDark] = useState(false);
   return (
     <>
       <header>
-        <Header />
+        <Header isDark={isDark} onClick={(value)=> setDark(!value)} />
       </header>
       <main className="home">
-        <Outset />
-        <OutsetAbout />
-        <Projects />
-        <Ability />
+        <Outset isDark={isDark}/>
+        <OutsetAbout isDark={isDark}/>
+        <Projects isDark={isDark}/>
+        <Ability isDark={isDark}/>
         <Contact />
         <Footer />
       </main>

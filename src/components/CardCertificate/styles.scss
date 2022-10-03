@@ -6,8 +6,8 @@
     border-radius: config.$border-radius-m;
     font-family: config.$font-family;
 
-    height: 180px;
-    width: 140px;
+    height: 160px;
+    width: 120px;
     margin-right: 1em;
     cursor: pointer;
     transition: 0.3s;
@@ -38,4 +38,25 @@
 .card-box:hover {
     box-shadow: config.$box-shadow-p;
 
+}
+
+.dark {
+    .card-box {
+        background-color: config.$background-dark-default;
+        border-radius: config.$border-radius-m;
+        font-family: config.$font-family;
+    
+        transition: 0.3s;
+
+        p {
+
+            color: config.$color-dark-secondary;
+    
+        }
+    }
+
+    .card-box:hover {
+        box-shadow: -4px 4px 8px rgb(0 0 0 / 50%);
+    }
+    
 }

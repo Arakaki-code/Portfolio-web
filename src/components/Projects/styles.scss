@@ -3,7 +3,6 @@
 .box {
   width: 100%;
   padding: 4em 0 4em 0;
-  background-color: config.$background-light-grey;
 
   display: flex;
   flex-direction: column;
@@ -213,7 +212,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 3em;
+    margin-top: 2em;
     padding: 1em 1em;
     text-decoration: none;
     white-space: nowrap;
@@ -233,6 +232,114 @@
 
   .projects-link-codepen:hover {
     background-color: config.$background-light-clear;
+
+  }
+}
+
+
+
+
+
+.dark {
+
+ 
+
+    .projects-rocketseat-link {
+      color: config.$color-emphasis-dark;
+    }
+  
+    .projects-rocketseat-h3 {
+      color: config.$color-dark-primary;
+  
+    }
+  
+    .projects-rocketseat-p {
+      color: config.$color-dark-secondary;
+  
+    }
+
+  .projects-rocketseat {
+
+    span {
+      color: config.$color-dark-secondary;
+    }
+
+    .projects-rocketseat_content {
+
+      .rocketseat_content_text {
+
+        .rocketseat_content_text_span {
+          color: config.$color-dark-primary;
+        }
+
+        .rocketseat_content_text_p {
+          color: config.$color-dark-secondary;
+        }
+
+        .rocketseat_content_github {
+
+          .rocketseat_content_github_p {
+
+            color: config.$color-dark-secondary;
+          }
+        }
+
+        .rocketseat_content_github:hover {
+          background-color: config.$background-dark-clear;
+        }
+      }
+    }
+  }
+
+  .divisor {
+    background-color: config.$color-light-primary;
+  }
+
+  .projects-alura {
+
+    .alura-imersao-dev {
+      width: 100%;
+
+      span {
+        color: config.$color-dark-primary;
+      }
+    }
+
+    .alura-certificate {
+
+      span {
+        color: config.$color-dark-primary;
+      }
+
+    }
+
+    .alura-imersao-dev_content {
+      background-color: config.$background-dark-default;
+
+    }
+
+    .imersao_content_text {
+
+      .content_text {
+        color: config.$color-dark-primary;
+        font-weight: config.$font-weight-b;
+      }
+
+      .content_text-two {
+        color: config.$color-dark-secondary;
+      }
+    }
+  }
+
+  .projects-link-codepen {
+
+    span {
+      color: config.$color-emphasis-dark;
+    }
+  }
+
+  .projects-link-codepen:hover {
+    background-color: config.$background-dark-clear;
 
   }
 }
