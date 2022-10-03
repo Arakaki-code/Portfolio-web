@@ -5,9 +5,9 @@
   align-items: center;
   width: 100%;
   justify-content: center;
-  margin-top: 5em;
+  padding-top: 5em;
 
-
+  background-color: config.$background-light-clear;
 
   z-index: 10;
 }
@@ -57,4 +57,28 @@
     width: 100%;
   }
 
+}
+
+.dark {
+  span {
+    font-size: config.$font-size-m;
+    color: config.$color-emphasis-dark;
+    font-weight: config.$font-weight-m;
+    transition: all .6s;
+
+  }
+
+  h1 {
+    color: config.$color-emphasis-dark;
+    transition: all .6s;
+
+  }
+
+  p {
+    color: config.$color-dark-primary; 
+    transition: all .6s;
+
+  }
+  
+  
 }

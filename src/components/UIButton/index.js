@@ -8,10 +8,11 @@ const UIButton = ({
   type,
   onClick,
   component: Component,
+  isDark,
   ...restProps
 }) => {
   return (
-    <Component className={`button ${className}`} {...restProps}>
+    <Component className={[`button ${className}`, isDark ? "dark" : ""].join(" ")} {...restProps}>
       {children}
     </Component>
   );

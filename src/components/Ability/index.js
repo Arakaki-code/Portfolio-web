@@ -2,22 +2,35 @@ import "./styles.scss";
 import Title from "../Title";
 import { useState } from "react";
 
-function Ability() {
+function Ability(props) {
+  const { isDark } = props;
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="container-ability">
+    <div style={isDark ? {backgroundColor:'#252A32'} : {backgroundColor:'#F2F2F2'}} className={["container-ability", isDark ? "dark" : ""].join(" ")} id="ability">
       <div className="content-ability">
         <Title title="Habilidades" />
         <div className="content-ability_box">
           <div className="ability-skill_icon">
-            <div className="ability_icons" style={activeIndex === 0 ? {background: "#F75421"}: {}} onClick={() => setActiveIndex(0)}>
+            <div
+              className="ability_icons"
+              style={activeIndex === 0 ? { background: "#F75421" } : {}}
+              onClick={() => setActiveIndex(0)}
+            >
               <img src="./img/html.svg" alt="icon-html" />
             </div>
-            <div className="ability_icons" style={activeIndex === 1 ? {background: "#0082C0"}: {}} onClick={() => setActiveIndex(1)}>
+            <div
+              className="ability_icons"
+              style={activeIndex === 1 ? { background: "#0082C0" } : {}}
+              onClick={() => setActiveIndex(1)}
+            >
               <img src="./img/css.svg" alt="icon-html" />
             </div>
-            <div className="ability_icons" style={activeIndex === 2 ? {background: "#EAD41C"}: {}} onClick={() => setActiveIndex(2)}>
+            <div
+              className="ability_icons"
+              style={activeIndex === 2 ? { background: "#EAD41C" } : {}}
+              onClick={() => setActiveIndex(2)}
+            >
               <img src="./img/javascript.svg" alt="icon-html" />
             </div>
           </div>
@@ -43,13 +56,15 @@ function Ability() {
                   vida as minhas páginas web. Um dos conceitos que mais utilizo
                   do Css3 é o flexbox, torna elementos do html flexíveis de
                   acordo com a responsividade do layout. Sass é uma ótima
-                  extensão do css, com ele podemos criar variáveis, funções e
-                  reutilizar código, facilita a manutenção e melhora a
-                  performance do meu guia de estilo. Conheci também o Bootstrap, um
-                  framework que disponibiliza diversas classes css pré-prontas,
-                  oferecendo componentes, cores, responsividade e mais, para
-                  melhor experiência do usuário.
+                  extensão do css, facilita a manutenção e melhora a
+                  performance do meu guia de estilo. Conheci também o Bootstrap,
+                  um framework que disponibiliza diversas classes css
+                  pré-prontas, disponibilizando componentes e recursos, e oferecendo mais agilidade no desenvolvimento  .
                 </p>
+                <div className="devicon-ability">
+                  <i class="devicon-sass-original devicon-ability_item"></i>
+                  <i class="devicon-bootstrap-plain devicon-ability_item"></i>
+                </div>
               </div>
             )}
 
@@ -61,9 +76,13 @@ function Ability() {
                   CSS ser mais dinâmico e funcional. Trabalhei juntamente com
                   NodeJS que oferece uma biblioteca gigantesca, que utilizei
                   para criar meu servidor local para melhorar os processos e
-                  serviços da minha aplicação, permitindo também interação com banco de
-                  dados no PostgreSQL.
+                  serviços da minha aplicação, permitindo também interação com
+                  banco de dados no PostgreSQL.
                 </p>
+                <div className="devicon-ability">
+                  <i class="devicon-nodejs-plain devicon-ability_item"></i>
+                  <i class="devicon-postgresql-plain devicon-ability_item"></i>
+                </div>
               </div>
             )}
           </div>

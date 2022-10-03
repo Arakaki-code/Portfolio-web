@@ -26,13 +26,12 @@
     align-items: center;
     justify-content: center;
 
-
     .triangle-div-two {
-        border-left: 40px solid transparent;
-        border-right: 40px solid transparent;
-        border-bottom: 50px solid #F2F2F2;
-        position: absolute;
-        top: 9em;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-bottom: 50px solid #f2f2f2;
+      position: absolute;
+      top: 9em;
     }
 
     .about-content {
@@ -49,7 +48,6 @@
       background-color: config.$background-light-default;
       border-radius: config.$border-radius-x;
       box-shadow: config.$box-shadow-x;
-
 
       h3 {
         font-family: config.$font-family-sans;
@@ -68,6 +66,38 @@
 
       a {
         color: config.$color-emphasis-light;
+        font-weight: config.$font-weight-sans-b;
+      }
+    }
+  }
+}
+
+.dark {
+  .triangle-div {
+    border-top: 70px solid config.$background-dark-clear;
+  }
+
+  .about {
+    .about-content {
+      background-color: config.$background-dark-clear;
+      border-radius: config.$border-radius-x;
+      box-shadow: config.$box-shadow-x;
+
+      h3 {
+        font-family: config.$font-family-sans;
+        font-size: config.$font-size-m;
+        color: config.$color-dark-primary;
+        font-weight: config.$font-weight-sans-b;
+      }
+
+      p {
+        font-family: config.$font-family;
+        font-size: config.$font-size-body-m;
+        color: config.$color-dark-secondary;
+      }
+
+      a {
+        color: config.$color-emphasis-dark;
         font-weight: config.$font-weight-sans-b;
       }
     }

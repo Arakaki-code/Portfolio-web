@@ -5,18 +5,29 @@ import CodepenProjects from "../CodepenProjects";
 import CarouselSlide, { CarouselItem } from "../CarouselSlide";
 import { useState } from "react";
 
-export function Projects() {
+export function Projects(props) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { isDark } = props;
 
   return (
-    <div className="box">
+    <div
+      style={
+        isDark ? { backgroundColor: "#1D2024" } : { backgroundColor: "#E2E2E2" }
+      }
+      className={["box", isDark ? "dark" : ""].join(" ")}
+      id="project"
+    >
       <Title title="Portfólio" />
       <section className="projects-rocketseat">
-        <h3>Rocketseat</h3>
-        <p>
+        <h3 className="projects-rocketseat-h3">Rocketseat</h3>
+        <p className="projects-rocketseat-p">
           Agregando conhecimentos de back-end e front-end com bootcamps da{" "}
           <strong>
-            <a href="https://www.rocketseat.com.br/" target={"blank"}>
+            <a
+              className="projects-rocketseat-link"
+              href="https://www.rocketseat.com.br/"
+              target={"blank"}
+            >
               {" "}
               Rocketseat.
             </a>
@@ -54,9 +65,13 @@ export function Projects() {
                 express e nunjucks para uma melhor renderização e manipulação
                 dos conteúdos HTML com Javascript.
               </p>
-              <a href="https://github.com/Arakaki-code/LauchBase-da-Rocketseat" className="rocketseat_content_github" target={"blank"}>
+              <a
+                href="https://github.com/Arakaki-code/LauchBase-da-Rocketseat"
+                className="rocketseat_content_github"
+                target={"blank"}
+              >
                 <svg
-                className="rocketseat_content_icon"
+                  className="rocketseat_content_icon"
                   width="50"
                   height="50"
                   viewBox="0 0 50 50"
@@ -84,9 +99,13 @@ export function Projects() {
                 de JavaScript&#41;; PostgreSQL &#40;banco de dados&#41;.
               </p>
 
-              <a href="https://github.com/Arakaki-code/doe-rocketseat" className="rocketseat_content_github" target={"blank"}>
+              <a
+                href="https://github.com/Arakaki-code/doe-rocketseat"
+                className="rocketseat_content_github"
+                target={"blank"}
+              >
                 <svg
-                className="rocketseat_content_icon"
+                  className="rocketseat_content_icon"
                   width="50"
                   height="50"
                   viewBox="0 0 50 50"
@@ -107,20 +126,27 @@ export function Projects() {
       <div className="divisor"></div>
 
       <section className="projects-alura">
-        <h3>Alura</h3>
-        <p>
-          <a href="https://www.alura.com.br/" target={"blank"}>
+        <h3 className="projects-rocketseat-h3">Alura</h3>
+        <p className="projects-rocketseat-p">
+          <a
+            className="projects-rocketseat-link"
+            href="https://www.alura.com.br/"
+            target={"blank"}
+          >
             Alura{" "}
           </a>{" "}
-          &#40; plataforma de educação em tecnologia &#41; foi um dos presentes especial que ganhei em 2020, <br />
+          &#40; plataforma de educação em tecnologia &#41; foi um dos presentes
+          especial que ganhei em 2020, <br />
           Isto abrangeu mais os meus horizontes no percurso de aprendizado.
         </p>
         <div className="alura-certificate">
           <span>Certificados</span>
           <div className="certificate_content">
             <CardCertificate
+              isDark={isDark}
               img="./img/certificate.svg"
               text="Html e Css 01"
+              alt="certificado"
               onClick={() =>
                 window.open(
                   "https://cursos.alura.com.br/user/hana-sayuri/course/html5-css3-primeiros-passos/certificate",
@@ -129,8 +155,9 @@ export function Projects() {
               }
             />
             <CardCertificate
-              img="./img/certificate.svg"
+              isDark={isDark}
               text="Html e Css 02"
+              alt="certificado"
               onClick={() =>
                 window.open(
                   "https://cursos.alura.com.br/user/hana-sayuri/course/html5-css3-posicionamento-listas-navegacao/certificate",
@@ -139,8 +166,9 @@ export function Projects() {
               }
             />
             <CardCertificate
-              img="./img/certificate.svg"
+              isDark={isDark}
               text="Html e Css 03"
+              alt="certificado"
               onClick={() =>
                 window.open(
                   "https://cursos.alura.com.br/user/hana-sayuri/course/html5-css3-formularios-tabelas/certificate",
@@ -149,8 +177,9 @@ export function Projects() {
               }
             />
             <CardCertificate
-              img="./img/certificate.svg"
+              isDark={isDark}
               text="Html e Css avançado"
+              alt="certificado"
               onClick={() =>
                 window.open(
                   "https://cursos.alura.com.br/user/hana-sayuri/course/html5-css3-avancando-css/certificate",
@@ -159,8 +188,9 @@ export function Projects() {
               }
             />
             <CardCertificate
-              img="./img/certificate.svg"
+              isDark={isDark}
               text="Style guide"
+              alt="certificado"
               onClick={() =>
                 window.open(
                   "https://cursos.alura.com.br/user/hana-sayuri/course/guia-estilos-paginas-componentes/certificate",
@@ -169,8 +199,9 @@ export function Projects() {
               }
             />
             <CardCertificate
-              img="./img/certificate.svg"
+              isDark={isDark}
               text="Web design responsivo"
+              alt="certificado"
               onClick={() =>
                 window.open(
                   "https://cursos.alura.com.br/user/hana-sayuri/course/web-design-responsivo/certificate",
@@ -183,7 +214,7 @@ export function Projects() {
 
         <div className="alura-imersao-dev">
           <span>Imersão Dev</span>
-          <p>
+          <p className="projects-rocketseat-p">
             Partindo dos conhecimentos front-end para ImersãoDev, 7 dias de
             evento do Alura.
             <br /> 7 projetos com Html, Css e muito Javascript.
@@ -202,11 +233,17 @@ export function Projects() {
         </div>
       </section>
 
-      <a href="https://codepen.io/arakaki-code" target={"blank"} className="projects-link-codepen">
-        <span>
-          Demais projetos no codePen
-        </span>
-        <img src="./img/Link-pink.svg" alt="link"/>
+      <a
+        href="https://codepen.io/arakaki-code"
+        target={"blank"}
+        className="projects-link-codepen projects-rocketseat-link"
+      >
+        <span>Demais projetos no codePen</span>
+        {isDark ? (
+          <img src="./img/Link-purple.svg" alt="link" />
+        ) : (
+          <img src="./img/Link-pink.svg" alt="link" />
+        )}
       </a>
     </div>
   );

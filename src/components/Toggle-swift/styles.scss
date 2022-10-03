@@ -26,8 +26,13 @@
 
 .end {
   justify-content: flex-end;
+
 }
 
 .start {
   justify-content: flex-start;
+
+  .toggle-cicle{
+    background-color: #252A32;
+  }
 }

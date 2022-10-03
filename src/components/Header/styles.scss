@@ -40,10 +40,14 @@
         color: config.$color-emphasis-light;
       }
 
-      li:active{
-        color: config.$color-emphasis-light;
-        font-weight: config.$font-weight-b;
-      }
+    }
+
+    .active {
+      color: config.$color-emphasis-light;
+    }
+
+    .no-active {
+      color: config.$color-light-secondary;;
     }
   }
 
@@ -53,4 +57,30 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .dark {
+    background: config.$background-dark-default;
+
+    .list-menu{
+      li {
+        color: config.$color-dark-secondary;
+        transition: all .6s;
+        font-weight: config.$font-weight-m;
+        font-size: config.$font-size-body-x;
+      }
+
+      li:hover{
+        color: config.$color-emphasis-dark;
+      }
+
+    }
+
+    .active {
+      color: config.$color-emphasis-dark;
+    }
+
+    .no-active {
+      color: config.$color-dark-secondary;;
+    }
   }

@@ -2,7 +2,7 @@
 
 .container-ability {
   width: 100%;
-  padding: 4em 0 4em 0;
+  padding: 5em 0 5em 0;
 
   display: flex;
   justify-content: center;
@@ -11,6 +11,7 @@
 }
 
 .content-ability {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,6 +19,7 @@
 }
 
 .content-ability_box {
+  height: 300px;
 
   .ability-skill_icon {
     width: 100%;
@@ -70,11 +72,11 @@
       font-family: config.$font-family-sans;
 
       span {
-        font-size: config.$font-size-p;
+        font-size: config.$font-size-m;
         color: config.$color-light-secondary;
         font-weight: config.$font-weight-b;
+        margin-bottom: 0.5em;
 
-        margin-bottom: 1em;
       }
 
       p {
@@ -84,6 +86,21 @@
 
         margin: 0;
       }
+
+      .devicon-ability {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+      }
+      .devicon-ability_item {
+        font-size: 30px;
+        color: grey;
+        margin-right: 0.5em;
+      }
+
     }
 
     .ability-fade-in-down {
@@ -102,4 +119,54 @@
       }
     }
   }
+}
+
+.dark {
+  .container-ability {
+  
+    background-color: config.$background-dark-clear;
+  }
+  
+  
+  .content-ability_box {
+  
+  
+    .ability_icons {
+      background-color: config.$color-light-secondary;
+  
+    }
+  
+  
+    .ability-skill_text {
+  
+      .skill_text_item {
+  
+        background-color: config.$background-dark-default;
+        border-radius: config.$border-radius-m;
+        box-shadow: config.$box-shadow-center;
+  
+        font-family: config.$font-family-sans;
+  
+        span {
+          font-size: config.$font-size-m;
+          color: config.$color-dark-primary;
+          font-weight: config.$font-weight-b;
+  
+        }
+  
+        p {
+          font-size: config.$font-size-body-m;
+          color: config.$color-dark-secondary;
+          font-weight: config.$font-weight-sans-r;
+  
+        }
+  
+        .devicon-ability_item {
+          color: config.$color-dark-secondary;
+        }
+  
+      }
+    }
+  }
+
 }

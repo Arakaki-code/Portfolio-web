@@ -2,7 +2,7 @@
 
 .container-contact {
   width: 100%;
-  padding: 4em 0 4em 0;
+  padding: 5em 0 5em 0;
 
   background-color: config.$background-light-emphasis;
 }
@@ -82,43 +82,63 @@
 }
 
 .contact_box_form {
-
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  font-family: config.$font-family;
 
   .form-text-span {
     color: config.$color-emphasis-light;
     font-size: config.$font-size-p;
-    margin-bottom: 1.20em;
+    font-weight: config.$font-weight-m;
+    margin-bottom: 1.2em;
   }
 
-  .box_form {
+  input {
+    width: 25em;
+    height: 2.5em;
+    padding-left: 0.9em;
+    border: none;
+    border-radius: config.$border-radius-p;
+    box-shadow: config.$box-shadow-center;
+    border-bottom: 3px solid #fff;
+  }
 
-    label {
-        display: none;
-    }
+  input:focus {
+    border-bottom: 3px solid config.$color-emphasis-light;
+    outline: none;
+  }
 
-    input {
-        width: 25em;
-        height: 2.5em;
-        margin-bottom: 1em;
-        padding-left: 0.9em;
-        border: none;
-        border-radius: config.$border-radius-p;
-        box-shadow: config.$box-shadow-center;
-    }
+  textarea {
+    width: 25em;
+    height: 5em;
+    padding-left: 0.9em;
+    padding-top: 0.9em;
+    border: none;
+    border-radius: config.$border-radius-p;
+    box-shadow: config.$box-shadow-center;
+    border-bottom: 3px solid white;
+    font-family: config.$font-family;
+  }
 
-    textarea {
-        width: 25em;
-        height: 5em;
-        margin-bottom: 1em;
-        padding-left: 0.9em;
-        padding-top: 0.9em;
-        border: none;
-        border-radius: config.$border-radius-p;
-        box-shadow: config.$box-shadow-center;
-    }
+  textarea:focus {
+    border-bottom: 3px solid config.$color-emphasis-light;
+    outline: none;
+  }
+
+  .box-form-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1em;
+  }
+
+  .span-input-error {
+    color: red;
+    font-size: config.$font-size-body-p;
+    font-weight: 600;
+    margin-top: 0.3em;
   }
 }
