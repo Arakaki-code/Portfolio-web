@@ -1,9 +1,8 @@
 @use "../../styles/config";
 
 .box {
-  width: 100%;
   padding: 4em 0 4em 0;
-
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +17,7 @@
     font-family: config.$font-family;
     font-size: config.$font-size-m;
     color: config.$color-light-primary;
-    font-weight: config.$font-weight-sans-b;
+    font-weight: config.$font-weight-b;
 
     margin-top: 0;
     margin-bottom: 20px;
@@ -34,7 +33,7 @@
   }
 
   .projects-rocketseat {
-    width: 900px;
+    max-width: 900px;
 
     display: flex;
     flex-direction: column;
@@ -62,6 +61,7 @@
 
       .rocketseat_content_text {
         width: 45%;
+        padding-top: 0.4em;
 
         .rocketseat_content_text_span {
           font-family: config.$font-family;
@@ -82,7 +82,7 @@
           flex-direction: row;
           align-items: center;
           justify-content: center;
-          margin-top: 1.4em;
+          margin-top: 1em;
           padding: 5px 10px;
           text-decoration: none;
           white-space: nowrap;
@@ -180,6 +180,18 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+
+        .certificate_content_div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          margin-right: 1em;
+        }
+
+        .certificate_content_div:last-child {
+          margin-right: 0;
+        }
       }
     }
 
@@ -232,60 +244,55 @@
 
   .projects-link-codepen:hover {
     background-color: config.$background-light-clear;
-
   }
 }
 
-
-
-
-
 .dark {
 
- 
+  .box {
+    h3 {
+      color: config.$color-dark-primary !important;
+    }
+  }
+  .projects-rocketseat-link {
+    color: config.$color-emphasis-dark;
+  }
 
-    .projects-rocketseat-link {
-      color: config.$color-emphasis-dark;
-    }
-  
-    .projects-rocketseat-h3 {
-      color: config.$color-dark-primary;
-  
-    }
-  
-    .projects-rocketseat-p {
-      color: config.$color-dark-secondary;
-  
-    }
+  .projects-rocketseat-h3 {
+    color: config.$color-dark-primary;
+  }
+
+  .projects-rocketseat-p {
+    color: config.$color-dark-secondary;
+  }
 
   .projects-rocketseat {
-
     span {
       color: config.$color-dark-secondary;
     }
 
     .projects-rocketseat_content {
-
       .rocketseat_content_text {
-
         .rocketseat_content_text_span {
-          color: config.$color-dark-primary;
+          color: config.$color-dark-primary !important;
         }
 
         .rocketseat_content_text_p {
-          color: config.$color-dark-secondary;
+          color: config.$color-dark-secondary !important;
+
+          a {
+            color: config.$color-emphasis-dark;
+          }
         }
 
         .rocketseat_content_github {
-
           .rocketseat_content_github_p {
-
-            color: config.$color-dark-secondary;
+            color: config.$color-dark-secondary !important;
           }
         }
 
         .rocketseat_content_github:hover {
-          background-color: config.$background-dark-clear;
+          background-color: config.$background-dark-grey;
         }
       }
     }
@@ -297,49 +304,972 @@
 
   .projects-alura {
 
+    h3.projects-alura-h3 {
+      color: config.$color-dark-primary!important;
+
+    }
+    a.projects-alura-link {
+      color: config.$color-emphasis-dark!important;
+
+    }
+
+    p.projects-alura-p {
+      color: config.$color-dark-secondary!important;
+      
+    }
     .alura-imersao-dev {
       width: 100%;
 
       span {
-        color: config.$color-dark-primary;
+        color: config.$color-dark-primary!important;
+      }
+
+      p {
+        color: config.$color-dark-secondary !important;
+
       }
     }
 
     .alura-certificate {
-
       span {
-        color: config.$color-dark-primary;
+        color: config.$color-dark-primary !important;
       }
-
     }
 
     .alura-imersao-dev_content {
-      background-color: config.$background-dark-default;
-
+      background-color: config.$background-dark-default !important;
     }
 
     .imersao_content_text {
-
       .content_text {
-        color: config.$color-dark-primary;
+        color: config.$color-dark-primary !important;
         font-weight: config.$font-weight-b;
       }
 
       .content_text-two {
-        color: config.$color-dark-secondary;
+        color: config.$color-dark-secondary !important;
       }
     }
   }
 
   .projects-link-codepen {
-
     span {
       color: config.$color-emphasis-dark;
     }
   }
 
   .projects-link-codepen:hover {
-    background-color: config.$background-dark-clear;
+    background-color: config.$background-dark-grey;
+  }
+}
 
+// ------------------ MEDIA QUERIES --------------------
+
+@media (min-width: 769px) and (max-width: 945px) {
+  .box {
+    padding: 2.3em 0 2.3em 0;
+
+    a {
+      color: config.$color-emphasis-light;
+      font-weight: config.$font-weight-b;
+    }
+
+    h3 {
+      font-family: config.$font-family;
+      font-size: config.$font-size-p;
+      color: config.$color-light-primary;
+      font-weight: config.$font-weight-b;
+
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-family: config.$font-family;
+      font-size: config.$font-size-body-m;
+      color: config.$color-light-primary;
+
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+
+    .projects-rocketseat {
+      max-width: 650px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: config.$font-family;
+
+      span {
+        font-size: config.$font-size-p;
+        color: config.$color-light-primary;
+        font-weight: config.$font-weight-m;
+
+        margin-bottom: 1em;
+      }
+
+      .projects-rocketseat_content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+
+        .projects-rocketseat_carousel {
+          width: 100%;
+          margin-right: 1em !important;
+        }
+
+        .rocketseat_content_text {
+          width: 100% !important;
+          padding-top: 0.4em;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .rocketseat_content_text_span {
+            font-family: config.$font-family;
+            font-size: config.$font-size-body-xx !important;
+            color: config.$color-light-primary;
+            margin-bottom: 0.2em;
+          }
+
+          .rocketseat_content_text_p {
+            font-family: config.$font-family;
+            font-size: config.$font-size-body-m;
+            color: config.$color-light-secondary;
+            margin-bottom: 0;
+            margin-top: 0.8em;
+            text-align: justify;
+          }
+
+          .rocketseat_content_github {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1em;
+            padding: 5px 10px;
+            text-decoration: none;
+            white-space: nowrap;
+            border-radius: config.$border-radius-p;
+            width: 50%;
+            transition: 0.5s;
+
+            .rocketseat_content_icon {
+              width: 2.6em;
+            }
+
+            .rocketseat_content_github_p {
+              margin-bottom: 0;
+              margin-left: 10px;
+
+              font-family: config.$font-family;
+              font-size: config.$font-size-body-m;
+              color: config.$color-light-secondary;
+            }
+          }
+
+          .rocketseat_content_github:hover {
+            background-color: config.$background-light-clear;
+          }
+        }
+      }
+    }
+
+    .divisor {
+      width: 40%;
+      height: 2px;
+      background-color: config.$color-dark-primary;
+      margin: 1.8em 0 1.8em 0;
+    }
+
+    .projects-alura {
+      max-width: 650px;
+
+      .alura-imersao-dev {
+        width: 100%;
+
+        p {
+          margin-top: 0.6em;
+        }
+
+        span {
+          font-size: config.$font-size-body-xx !important;
+          color: config.$color-light-primary;
+          font-weight: config.$font-weight-m;
+
+          margin-bottom: 1em;
+        }
+      }
+
+      .alura-certificate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 3em;
+
+        span {
+          font-size: config.$font-size-body-xx !important;
+          font-weight: config.$font-weight-m !important;
+          color: config.$color-light-primary;
+          margin-bottom: 1em;
+        }
+
+        .certificate_content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+        }
+      }
+
+      .alura-imersao-dev_content {
+        background-color: config.$background-light-default;
+        box-shadow: config.$box-shadow-center;
+
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .imersao_content_text {
+        padding: 1em 3em;
+
+        .content_text {
+          font-size: config.$font-size-body-x;
+          color: config.$color-light-primary;
+          font-weight: config.$font-weight-m;
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 566px) and (max-width: 768px) {
+  .box {
+    padding: 2.3em 0 2.3em 0;
+
+    a {
+      color: config.$color-emphasis-light;
+      font-weight: config.$font-weight-b;
+    }
+
+    h3 {
+      font-family: config.$font-family;
+      font-size: config.$font-size-p !important;
+      color: config.$color-light-primary;
+      font-weight: config.$font-weight-b;
+
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-family: config.$font-family;
+      font-size: config.$font-size-body-m;
+      color: config.$color-light-primary;
+
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+  }
+
+  .projects-rocketseat {
+    max-width: 550px !important;
+  }
+
+  .projects-rocketseat_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    .projects-rocketseat_carousel {
+      width: 100% !important;
+      margin-right: 1em !important;
+    }
+
+    .rocketseat_content_text {
+      width: 100% !important;
+      padding-top: 0.4em;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .rocketseat_content_text_span {
+        font-family: config.$font-family;
+        font-size: config.$font-size-body-xx !important;
+        color: config.$color-light-primary;
+        font-weight: config.$font-weight-mr !important;
+        margin-bottom: 0.2em;
+      }
+
+      .rocketseat_content_text_p {
+        font-family: config.$font-family;
+        font-size: config.$font-size-body-m;
+        color: config.$color-light-secondary;
+        margin-bottom: 0;
+        margin-top: 0.8em;
+        text-align: justify;
+      }
+
+      .rocketseat_content_github {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1em;
+        padding: 5px 10px;
+        text-decoration: none;
+        white-space: nowrap;
+        border-radius: config.$border-radius-p;
+        width: 50%;
+        transition: 0.5s;
+
+        .rocketseat_content_icon {
+          width: 2.6em;
+        }
+
+        .rocketseat_content_github_p {
+          margin-bottom: 0;
+          margin-left: 10px;
+
+          font-family: config.$font-family;
+          font-size: config.$font-size-body-m;
+          color: config.$color-light-secondary;
+        }
+      }
+
+      .rocketseat_content_github:hover {
+        background-color: config.$background-light-clear;
+      }
+    }
+  }
+
+  .alura-certificate {
+    margin-bottom: 1.3em !important;
+
+    span {
+      font-size: config.$font-size-body-xx !important;
+      font-weight: config.$font-weight-m !important;
+    }
+    .certificate_content {
+      display: flex;
+      flex-direction: column !important;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .box
+    .projects-alura
+    .alura-certificate
+    .certificate_content
+    .certificate_content_div {
+    margin-bottom: 1em !important;
+    margin-right: 0 !important;
+  }
+
+  .box .projects-alura {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .alura-imersao-dev {
+    width: 100%;
+
+    span {
+      font-size: config.$font-size-body-xx !important;
+      color: config.$color-light-primary;
+      font-weight: config.$font-weight-m !important;
+
+      margin-bottom: 1em;
+    }
+  }
+
+  .box .projects-alura .alura-imersao-dev_content {
+    width: 100%;
+    margin: 0 0;
+  }
+
+  .certificate_content-div:last-child {
+    margin-bottom: 0;
+  }
+
+  p.projects-alura-p {
+    width: 100%;
+  }
+}
+
+@media (min-width: 446px) and (max-width: 565px) {
+  .box {
+    padding: 2.3em 0 2.3em 0;
+
+    a {
+      color: config.$color-emphasis-light;
+      font-weight: config.$font-weight-b;
+    }
+
+    h3 {
+      font-family: config.$font-family;
+      font-size: config.$font-size-p !important;
+      color: config.$color-light-primary;
+      font-weight: config.$font-weight-b;
+
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-family: config.$font-family;
+      font-size: config.$font-size-body-m;
+      color: config.$color-light-primary;
+
+      margin-bottom: 1em;
+      margin-top: 0;
+    }
+  }
+
+  .projects-rocketseat {
+    max-width: 400px !important;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: config.$font-family;
+
+    span {
+      font-size: config.$font-size-p !important;
+      color: config.$color-light-primary;
+      font-weight: config.$font-weight-mr;
+
+      margin-bottom: 1em;
+    }
+
+    .projects-rocketseat_content {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+
+      .projects-rocketseat_carousel {
+        width: 100% !important;
+        margin-right: 0 !important;
+      }
+      .rocketseat_content_text {
+        width: 100% !important;
+        padding-top: 0.4em;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .rocketseat_content_text_span {
+          font-family: config.$font-family;
+          font-size: config.$font-size-body-xx !important;
+          color: config.$color-light-primary;
+          margin-bottom: 0.2em;
+        }
+
+        .rocketseat_content_text_p {
+          font-family: config.$font-family;
+          font-size: config.$font-size-body-m;
+          color: config.$color-light-secondary;
+          margin-bottom: 0;
+          margin-top: 0.8em;
+          text-align: justify;
+        }
+
+        .rocketseat_content_github {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-top: 1em;
+          padding: 5px 10px;
+          text-decoration: none;
+          white-space: nowrap;
+          border-radius: config.$border-radius-p;
+          width: 50%;
+          transition: 0.5s;
+
+          .rocketseat_content_icon {
+            width: 2.6em;
+          }
+
+          .rocketseat_content_github_p {
+            margin-bottom: 0;
+            margin-left: 10px;
+
+            font-family: config.$font-family;
+            font-size: config.$font-size-body-m;
+            color: config.$color-light-secondary;
+          }
+        }
+
+        .rocketseat_content_github:hover {
+          background-color: config.$background-light-clear;
+        }
+      }
+    }
+  }
+
+  .divisor {
+    width: 40%;
+    height: 2px;
+    background-color: config.$color-dark-primary;
+    margin: 1.8em 0 1.8em 0;
+  }
+
+  .projects-alura {
+    max-width: 400px !important;
+  }
+
+  .alura-certificate {
+    margin-bottom: 1.3em !important;
+
+    span {
+      font-size: config.$font-size-body-xx !important;
+      font-weight: config.$font-weight-m;
+    }
+
+    .certificate_content {
+      display: flex;
+      flex-direction: column !important;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .box
+    .projects-alura
+    .alura-certificate
+    .certificate_content
+    .certificate_content_div {
+    margin-bottom: 1em !important;
+    margin-right: 0 !important;
+  }
+
+  .box .projects-alura {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .alura-imersao-dev {
+    span {
+      font-size: config.$font-size-body-xx !important;
+      font-weight: config.$font-weight-m;
+    }
+  }
+
+  .box .projects-alura .alura-imersao-dev_content {
+    width: 100%;
+    margin: 0 0;
+  }
+
+  .imersao_content_text {
+    padding: 1em 1.5em !important;
+
+    .content_text-two {
+      margin-top: 0.8em;
+    }
+  }
+
+  .certificate_content-div:last-child {
+    margin-bottom: 0;
+  }
+
+  p.projects-alura-p {
+    width: 100%;
+    text-align: justify !important;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 445px) {
+  .box {
+    padding: 2.3em 0 2.3em 0;
+
+    a {
+      color: config.$color-emphasis-light;
+      font-weight: config.$font-weight-b;
+    }
+
+    h3 {
+      font-family: config.$font-family;
+      font-size: config.$font-size-p !important;
+      color: config.$color-light-primary;
+      font-weight: config.$font-weight-b;
+
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-family: config.$font-family;
+      font-size: config.$font-size-body-m;
+      color: config.$color-light-primary;
+
+      margin-bottom: 1em;
+      margin-top: 0;
+    }
+  }
+
+  .projects-rocketseat {
+    max-width: 360px !important;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: config.$font-family;
+
+    span {
+      font-size: config.$font-size-p !important;
+      color: config.$color-light-primary;
+      font-weight: config.$font-weight-mr;
+
+      margin-bottom: 1em;
+    }
+
+    .projects-rocketseat_content {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+
+      .projects-rocketseat_carousel {
+        width: 100% !important;
+        margin-right: 0 !important;
+      }
+      .rocketseat_content_text {
+        width: 100% !important;
+        padding-top: 0.4em;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .rocketseat_content_text_span {
+          font-family: config.$font-family;
+          font-size: config.$font-size-body-x !important;
+          color: config.$color-light-primary;
+          margin-bottom: 0.2em;
+        }
+
+        .rocketseat_content_text_p {
+          font-family: config.$font-family;
+          font-size: config.$font-size-body-p !important;
+          color: config.$color-light-secondary;
+          margin-bottom: 0;
+          margin-top: 0.8em;
+          text-align: justify;
+        }
+
+        .rocketseat_content_github {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-top: 1em;
+          padding: 5px 10px;
+          text-decoration: none;
+          white-space: nowrap;
+          border-radius: config.$border-radius-p;
+          width: 50%;
+          transition: 0.5s;
+
+          .rocketseat_content_icon {
+            width: 2.6em;
+          }
+
+          .rocketseat_content_github_p {
+            margin-bottom: 0;
+            margin-left: 10px;
+
+            font-family: config.$font-family;
+            font-size: config.$font-size-body-m;
+            color: config.$color-light-secondary;
+          }
+        }
+
+        .rocketseat_content_github:hover {
+          background-color: config.$background-light-clear;
+        }
+      }
+    }
+  }
+
+  .divisor {
+    width: 40%;
+    height: 2px;
+    background-color: config.$color-dark-primary;
+    margin: 1.8em 0 1.8em 0;
+  }
+
+  .projects-alura {
+    max-width: 360px !important;
+  }
+
+  .alura-certificate {
+    margin-bottom: 1.3em !important;
+
+    span {
+      font-size: config.$font-size-body-x !important;
+      font-weight: config.$font-weight-mr !important;
+    }
+
+    .certificate_content {
+      display: flex;
+      flex-direction: column !important;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .box
+    .projects-alura
+    .alura-certificate
+    .certificate_content
+    .certificate_content_div {
+    margin-bottom: 1em !important;
+    margin-right: 0 !important;
+  }
+
+  .box .projects-alura {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .box .projects-alura .alura-imersao-dev_content {
+    width: 100%;
+    margin: 0 0;
+  }
+
+  .certificate_content-div:last-child {
+    margin-bottom: 0;
+  }
+
+  p.projects-alura-p {
+    width: 100%;
+    text-align: justify !important;
+  }
+
+  .alura-imersao-dev span {
+    font-size: config.$font-size-body-x !important;
+    font-weight: config.$font-weight-mr !important;
+  }
+
+  .imersao_content_text {
+    padding: 1em 1.7em !important;
+
+    strong.content_text {
+      font-size: config.$font-size-body-m !important;
+      font-weight: config.$font-weight-m !important;
+    }
+
+    .content_text-two {
+      font-size: config.$font-size-body-p !important;
+      margin-top: 0.8em !important;
+      text-align: justify;
+    }
+  }
+
+  a.projects-link-codepen.projects-rocketseat-link {
+    span {
+      font-size: config.$font-size-body-m !important;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .box {
+    padding: 2.5em 0 2.5em 0;
+
+    p {
+      font-size: config.$font-size-body-m;
+    }
+
+    h3 {
+      font-size: config.$font-size-p;
+    }
+
+    .projects-rocketseat {
+      max-width: 320px !important;
+      display: flex;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center;
+
+      .projects-rocketseat-h3 {
+        font-size: config.$font-size-p;
+        margin-bottom: 10px !important;
+      }
+
+      .projects-rocketseat-p {
+        text-align: justify !important;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: config.$font-size-body-m !important;
+        margin-bottom: 0 !important;
+      }
+
+      .projects-rocketseat_content {
+        width: 100%;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+
+        .projects-rocketseat_carousel {
+          width: 100% !important;
+          margin-right: 0 !important;
+        }
+
+        .rocketseat_content_text {
+          width: 100% !important;
+          padding-top: 0;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          span.rocketseat_content_text_span {
+            font-size: config.$font-size-body-x !important;
+            font-weight: config.$font-weight-mr;
+            margin-bottom: 0 !important;
+          }
+
+          .rocketseat_content_text_p {
+            font-size: config.$font-size-body-p !important;
+            margin-bottom: 0 !important;
+
+            text-align: justify !important;
+          }
+
+          .rocketseat_content_github {
+            width: 60% !important;
+
+            .rocketseat_content_icon {
+              width: 2em !important;
+            }
+          }
+        }
+      }
+    }
+
+    .divisor {
+      width: 50%;
+      height: 2px;
+      margin: 2em 0 2em 0;
+    }
+
+    .projects-alura {
+      width: 320px !important;
+
+      .alura-certificate {
+        margin-bottom: 2em;
+
+        span {
+          font-size: config.$font-size-body-x !important;
+          font-weight: config.$font-weight-mr !important;
+        }
+
+        .certificate_content {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap !important;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
+          .certificate_content_div {
+            margin-bottom: 0.5em;
+            width: 100%;
+            margin-right: 0;
+          }
+
+          .card-box {
+            margin-right: 0.5em;
+          }
+          .card-box:last-child {
+            margin-right: 0 !important;
+          }
+        }
+      }
+
+      .alura-imersao-dev_content {
+        margin: 0 !important;
+        width: 100% !important;
+      }
+
+      .alura-imersao-dev {
+        span {
+          font-size: config.$font-size-body-x !important;
+          font-weight: config.$font-weight-mr !important;
+        }
+
+        p {
+          margin-bottom: 15px !important;
+        }
+      }
+
+      .imersao_content_text {
+        padding: 1em 1.5em;
+
+        .content_text {
+          text-align: center !important;
+          width: 100% !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: config.$font-size-body-m !important;
+        }
+
+        .content_text-two {
+          text-align: justify !important;
+          font-size: config.$font-size-body-p !important;
+        }
+      }
+    }
+
+    .projects-link-codepen {
+      margin-top: 1.7em !important;
+
+      span {
+        font-size: config.$font-size-body-m !important;
+      }
+    }
   }
 }

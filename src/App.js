@@ -20,8 +20,8 @@ function App() {
         <OutsetAbout isDark={isDark}/>
         <Projects isDark={isDark}/>
         <Ability isDark={isDark}/>
-        <Contact />
-        <Footer />
+        <Contact isDark={isDark}/>
+        <Footer isDark={isDark}/>
       </main>
     </>
   );

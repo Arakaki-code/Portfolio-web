@@ -36,3 +36,18 @@
     background-color: #252A32;
   }
 }
+
+@media (max-width: 565px){
+
+  .toggle {
+    width: 75px;
+    height: 25px;
+  
+    .toggle-cicle {
+
+      img {
+        width: 18px;
+      }
+    }
+  }
+}

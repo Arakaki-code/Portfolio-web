@@ -1,62 +1,87 @@
 @use "../../styles/config";
 
 .card-box {
+  padding: 10px;
+  background-color: config.$background-light-default;
+  border-radius: config.$border-radius-m;
+  font-family: config.$font-family;
+
+  height: 160px;
+  width: 120px;
+  margin-right: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+
+  .card-box_content {
+    height: 100%;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    line-height: 19px;
+    font-size: config.$font-size-body-p;
+    margin: 0;
+    color: config.$color-light-secondary;
+  }
+}
+
+.card-box:last-child {
+  margin-right: 0;
+}
+
+.card-box:hover {
+  box-shadow: config.$box-shadow-p;
+}
+
+.dark {
+  .card-box {
+    background-color: config.$background-dark-default;
+    border-radius: config.$border-radius-m;
+    font-family: config.$font-family;
+
+    transition: 0.3s;
+
+    p {
+      color: config.$color-dark-secondary;
+    }
+  }
+
+  .card-box:hover {
+    box-shadow: -4px 4px 8px rgb(0 0 0 / 50%);
+  }
+}
+
+@media (max-width: 945px) {
+  .card-box {
     padding: 10px;
     background-color: config.$background-light-default;
     border-radius: config.$border-radius-m;
     font-family: config.$font-family;
 
-    height: 160px;
-    width: 120px;
+    height: 128px;
+    width: 90px;
     margin-right: 1em;
     cursor: pointer;
     transition: 0.3s;
 
     .card-box_content {
-        height: 100%;
-        width: 100%;
-
+      height: 100%;
+      width: 100%;
     }
 
     img {
-        width: 100%;
+      width: 100%;
     }
 
     p {
-        line-height: 19px;
-        font-size: config.$font-size-body-p;
-        margin: 0;
-        color: config.$color-light-secondary;
-
+      line-height: 19px;
+      font-size: config.$font-size-body-p;
+      margin: 0;
+      color: config.$color-light-secondary;
     }
-}
-
-.card-box:last-child {
-    margin-right: 0;
-}
-
-.card-box:hover {
-    box-shadow: config.$box-shadow-p;
-
-}
-
-.dark {
-    .card-box {
-        background-color: config.$background-dark-default;
-        border-radius: config.$border-radius-m;
-        font-family: config.$font-family;
-    
-        transition: 0.3s;
-
-        p {
-
-            color: config.$color-dark-secondary;
-    
-        }
-    }
-
-    .card-box:hover {
-        box-shadow: -4px 4px 8px rgb(0 0 0 / 50%);
-    }
-    
+  }
 }

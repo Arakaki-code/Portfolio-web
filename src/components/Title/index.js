@@ -5,9 +5,9 @@ function Title(props) {
   const {isDark, title} = props;
   return (
     <div className={["content-title", (isDark ? "dark" : "")].join(" ")}>
-      <div></div>
-      <span>{title}</span>
-      <div></div>
+      <div className="divisor-title"></div>
+      <span className="span-title">{title}</span>
+      <div className="divisor-title"></div>
     </div>
   );
 }

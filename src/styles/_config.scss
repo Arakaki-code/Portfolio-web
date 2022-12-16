@@ -16,9 +16,9 @@ $background-light-clear: #F2F2F2;
 $background-light-grey: #E2E2E2;
 $background-light-emphasis: #F7C4D2;
 
-$background-dark-default: #3D434D; 
-$background-dark-clear: #252A32;
-$background-dark-grey: #303743;
+$background-dark-default: #2d323a; 
+$background-dark-clear: #1D2024;
+$background-dark-grey: #252A32;
 $background-dark-emphasis: #4E3172;
 
 $background-divisor-light: rgba(236, 79, 120, 0.40);
@@ -42,9 +42,11 @@ $font-family-sans: 'Nunito Sans', sans-serif;
 
 $font-size-xl: 60px;
 $font-size-x: 52px;
+$font-size-xm: 40px;
 $font-size-m: 36px;
-$font-size-p: 24px;
-$font-size-body-x: 18px;
+$font-size-p: 26px;
+$font-size-body-xx: 22px;
+$font-size-body-x: 20px;
 $font-size-body-m: 16px;
 $font-size-body-p: 14px;
 
@@ -54,6 +56,7 @@ $font-weight-sans-b: 600;
 $font-weight-sans-r: 400;
 $font-weight-b: 700;
 $font-weight-m: 600;
+$font-weight-mr: 500;
 $font-weight-r: 400;
 
 /**
