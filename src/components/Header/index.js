@@ -1,20 +1,27 @@
 import "./styles.scss";
+import HamburguerMenu from "../HamburguerMenu";
 import React from "react";
 import Toggle from "../Toggle-swift";
 import { Link } from "react-scroll";
 
+
 function Header(props) {
-  const {isDark, onClick} = props;
+  const { isDark, onClick } = props;
 
   const [isChecked, setChecked] = React.useState(false);
+  const [isBurguerOpen, setBurguerOpen] = React.useState(false);
+
   const handleCheck = () => {
     setChecked((prevState) => !prevState);
-    onClick(isChecked)
+    onClick(isChecked);
   };
 
+  const toggleHamburger = () => {
+    setBurguerOpen(!isBurguerOpen)
+  }
 
   return (
-    <div className={["header", (isDark ? "dark" : "")].join(" ")}>
+    <div className={["header", isDark ? "dark" : ""].join(" ")}>
       <div className="container">
         <Link
           to="first"
@@ -27,7 +34,15 @@ function Header(props) {
         </Link>
 
         <nav className="nav-menu">
-          <ul className="list-menu">
+          <div className="hamburguer-menu" onClick={toggleHamburger}>
+            <HamburguerMenu />
+          </div>
+          
+          <ul className={["list-menu", isBurguerOpen ? "is-open": "", isDark ? "dark" : ""].join(" ")} >
+            <div className={["list-menu-head", isBurguerOpen ? "is-open-head": ""].join(" ")}>
+              <p>Menu</p>
+              <img src="/img/close.svg" alt="icon-close"/>
+            </div>
             <li className="list-menu_item">
               <Link
                 activeClass="active"
@@ -72,7 +87,6 @@ function Header(props) {
                 smooth={true}
                 offset={-180}
                 duration={500}
-
               >
                 Contato
               </Link>
