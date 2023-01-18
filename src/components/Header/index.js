@@ -1,6 +1,6 @@
 import "./styles.scss";
 import HamburguerMenu from "../HamburguerMenu";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Toggle from "../Toggle-swift";
 import { Link } from "react-scroll";
 
@@ -15,10 +15,24 @@ function Header(props) {
     setChecked((prevState) => !prevState);
     onClick(isChecked);
   };
-
+  function handleClickOutside(event) {
+    if (activeRef && !activeRef?.current?.contains(event.target)) {
+      setBurguerOpen(false);
+    }
+  }
+  const activeRef = useRef(null);
   const toggleHamburger = () => {
     setBurguerOpen(!isBurguerOpen)
   }
+  useEffect(() => {
+    if (!isBurguerOpen && activeRef) {
+      document.addEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside)
+    }
+  }, [isBurguerOpen]);
 
   return (
     <div className={["header", isDark ? "dark" : ""].join(" ")}>
@@ -38,10 +52,10 @@ function Header(props) {
             <HamburguerMenu />
           </div>
           
-          <ul className={["list-menu", isBurguerOpen ? "is-open": "", isDark ? "dark" : ""].join(" ")} >
+          <ul ref={activeRef} className={["list-menu", isBurguerOpen ? "is-open": "", isDark ? "dark" : ""].join(" ")} >
             <div className={["list-menu-head", isBurguerOpen ? "is-open-head": ""].join(" ")}>
               <p>Menu</p>
-              <img src="/img/close.svg" alt="icon-close"/>
+              <img onClick={() =>  setBurguerOpen(false)} src="/img/close.svg" alt="icon-close"/>
             </div>
             <li className="list-menu_item">
               <Link

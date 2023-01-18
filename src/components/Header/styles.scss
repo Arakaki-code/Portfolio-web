@@ -143,10 +143,11 @@
       display: inherit !important;
       width: 240px;
       height: 100vh;
-      padding: 1.2em;
+      padding: 0 1.2em !important;
   
       position: absolute!important;
       top: 0px;
+      left: 0;
       background: config.$background-light-default;
 
       li {
