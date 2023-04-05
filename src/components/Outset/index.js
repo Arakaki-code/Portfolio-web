@@ -30,9 +30,9 @@ function Outset(props) {
 
         <div className="outset-my-photo">
           {isDark ? (
-            <img src="/img/my-photo-dark.svg" alt="myPhoto" />
+            <img src="/img/my-photo-dark.png" alt="myPhoto" />
           ) : (
-            <img src="/img/my-photo-light.svg" alt="myPhoto" />
+            <img src="/img/my-photo-light.png" alt="myPhoto" />
           )}
         </div>
       </div>
