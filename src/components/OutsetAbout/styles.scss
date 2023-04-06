@@ -53,14 +53,14 @@
         font-family: config.$font-family-sans;
         font-size: config.$font-size-m;
         color: config.$color-light-primary;
-        font-weight: config.$font-weight-sans-b;
+        font-weight: 700;
 
         margin: 0 0 20px;
       }
 
       p {
         font-family: config.$font-family;
-        font-size: config.$font-size-body-m;
+        font-size: 18px;
         color: config.$color-light-secondary;
       }
 
@@ -92,7 +92,7 @@
 
       p {
         font-family: config.$font-family;
-        font-size: config.$font-size-body-m;
+        font-size: config.$font-size-body-x;
         color: config.$color-dark-secondary;
       }
 

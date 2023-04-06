@@ -73,7 +73,7 @@
       font-family: config.$font-family-sans;
 
       span {
-        font-size: config.$font-size-m;
+        font-size: 28px;
         color: config.$color-light-secondary;
         font-weight: config.$font-weight-b;
         margin-bottom: 0.5em;
@@ -362,7 +362,7 @@
   }
 }
 
-@media (min-width: 376px) and (max-width: 445px){
+@media (min-width: 360px) and (max-width: 445px){
   .content-ability_box {
     height: 380px;
 
@@ -377,7 +377,7 @@
   }
 
   .content-ability_box {
-    width: 100%;
+    width: 330px !important;
 
   }
 
