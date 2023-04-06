@@ -290,9 +290,9 @@ export function Projects(props) {
       >
         <span>Demais projetos no codePen</span>
         {isDark ? (
-          <img src="./img/Link-purple.svg" alt="link" />
+          <img src="./img/link-purple.svg" alt="link" />
         ) : (
-          <img src="./img/Link-pink.svg" alt="link" />
+          <img src="./img/link-pink.svg" alt="link" />
         )}
       </a>
     </div>
