@@ -60,7 +60,7 @@
 
       p {
         font-family: config.$font-family;
-        font-size: 18px;
+        font-size: config.$font-size-body-x;
         color: config.$color-light-secondary;
       }
 
@@ -69,6 +69,19 @@
         font-weight: config.$font-weight-sans-b;
       }
     }
+  }
+
+  button.btn__leia-mais {
+    border: none;
+    background-color: transparent;
+    font-size: config.$font-size-body-m;
+    font-weight: config.$font-weight-m;
+    color: config.$color-emphasis-light;
+    cursor: pointer;
+  }
+
+  button.btn__leia-mais:hover {
+    text-decoration: underline;
   }
 }
 
@@ -102,12 +115,22 @@
       }
     }
   }
+
+  button.btn__leia-mais {
+    border: none;
+    background-color: transparent;
+    font-size: config.$font-size-body-m;
+    font-weight: config.$font-weight-m;
+    color: config.$color-emphasis-dark;
+    cursor: pointer;
+  }
+
+  button.btn__leia-mais:hover {
+    text-decoration: underline;
+  }
 }
 
-
-@media  (min-width: 946px) and (max-width: 1040px) {
-  
-  
+@media (min-width: 946px) and (max-width: 1040px) {
   .about {
     width: 100%;
     height: 100%;
@@ -125,7 +148,7 @@
     }
 
     .about-content {
-      width: 60% ;
+      width: 60%;
 
       display: flex;
       flex-direction: column;
@@ -163,8 +186,6 @@
 }
 
 @media (min-width: 769px) and (max-width: 945px) {
-
-
   .about {
     width: 100%;
     height: 100%;
@@ -207,11 +228,10 @@
 
       p {
         font-family: config.$font-family;
-        font-size: config.$font-size-body-m;
+        font-size: config.$font-size-body-m !important;
         color: config.$color-light-secondary;
         margin: 0;
-      text-align: justify;
-
+        text-align: justify;
       }
 
       a {
@@ -222,25 +242,14 @@
   }
 }
 
-@media (min-width: 566px) and (max-width: 768px){
+@media (min-width: 566px) and (max-width: 768px) {
   .box-about {
     padding: 3em 0;
   }
-  
+
   .box-about .triangle-div {
     display: none !important;
   }
-
-  .about-content {
-    h3 {
-      font-size: config.$font-size-p !important;
-    }
-    p {
-      text-align: justify;
-      margin: 0;
-    }
-
-  } 
 
   .box-about .about .about-content {
     width: 70%;
@@ -251,28 +260,26 @@
     text-align: center;
     padding: 2em 2em;
     margin-top: 6em;
-}
-}
 
-@media (min-width: 446px) and (max-width: 565px){
-  .box-about {
-    padding: 3em 0;
-  }
-  
-  .box-about .triangle-div {
-    display: none !important;
-  }
-
-  .about-content {
     h3 {
       font-size: config.$font-size-p !important;
     }
     p {
       text-align: justify;
+      font-size: config.$font-size-body-m;
       margin: 0;
     }
+  }
+}
 
-  } 
+@media (min-width: 446px) and (max-width: 565px) {
+  .box-about {
+    padding: 3em 0;
+  }
+
+  .box-about .triangle-div {
+    display: none !important;
+  }
 
   .box-about .about .about-content {
     width: 70%;
@@ -283,60 +290,26 @@
     text-align: center;
     padding: 2em 2em;
     margin-top: 6em;
-}
-}
 
-@media (min-width: 376px) and (max-width: 445px){
-   .box-about {
-    padding: 3em 0;
-  }
-  
-  .box-about .triangle-div {
-    display: none !important;
-  }
-
-  .about-content {
     h3 {
       font-size: config.$font-size-p !important;
     }
     p {
       text-align: justify;
+      font-size: config.$font-size-body-p !important;
       margin: 0;
     }
-
-  } 
-
-  .box-about .about .about-content {
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2em 1.5em;
-    margin-top: 5em;
-}
+  }
 }
 
-@media (max-width: 375px){
+@media (min-width: 376px) and (max-width: 445px) {
   .box-about {
     padding: 3em 0;
   }
-  
+
   .box-about .triangle-div {
     display: none !important;
   }
-
-  .about-content {
-    h3 {
-      font-size: config.$font-size-p !important;
-    }
-    p {
-      text-align: justify;
-      margin: 0;
-    }
-
-  } 
 
   .box-about .about .about-content {
     width: 75%;
@@ -347,5 +320,44 @@
     text-align: center;
     padding: 2em 1.5em;
     margin-top: 5em;
+
+    h3 {
+      font-size: config.$font-size-p !important;
+    }
+    p {
+      text-align: justify;
+      margin: 0;
+      font-size: config.$font-size-body-p !important;
+    }
+  }
 }
+
+@media (max-width: 375px) {
+  .box-about {
+    padding: 3em 0;
+  }
+
+  .box-about .triangle-div {
+    display: none !important;
+  }
+
+  .box-about .about .about-content {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2em 1.5em;
+    margin-top: 5em;
+
+    h3 {
+      font-size: config.$font-size-p !important;
+    }
+    p {
+      text-align: justify;
+      margin: 0;
+      font-size: config.$font-size-body-p !important;
+    }
+  }
 }

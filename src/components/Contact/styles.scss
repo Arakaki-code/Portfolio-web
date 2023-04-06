@@ -16,7 +16,7 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  animation: slide-in 0.5s ease-out forwards
+  animation: slide-in 0.5s ease-out forwards;
 }
 
 @keyframes slide-in {
@@ -33,7 +33,6 @@
 .modal.hide {
   animation: fade-out 0.5s ease-out forwards;
 }
-
 
 @keyframes fade-out {
   from {
@@ -57,8 +56,6 @@
     font-size: 1.2em;
     font-weight: bold;
   }
-
-  
 }
 
 .content-contact {
@@ -157,6 +154,7 @@
     border-radius: config.$border-radius-p;
     box-shadow: config.$box-shadow-center;
     border-bottom: 3px solid #fff;
+    font-size: config.$font-size-body-m;
   }
 
   input:focus {
@@ -174,7 +172,8 @@
     box-shadow: config.$box-shadow-center;
     border-bottom: 3px solid white;
     font-family: config.$font-family;
-    color: #000;
+    color: #000 !important;
+    font-size: config.$font-size-body-m;
   }
 
   textarea:focus {
@@ -191,7 +190,7 @@
   }
 
   .span-input-error {
-    color: red;
+    color: rgb(218, 35, 35);
     font-size: config.$font-size-body-p;
     font-weight: 600;
     margin-top: 0.3em;
@@ -240,6 +239,7 @@
       border-bottom: 3px solid config.$background-dark-clear;
       background-color: config.$background-dark-clear;
       color: config.$color-dark-secondary;
+      font-size: config.$font-size-body-m;
     }
 
     input:focus {
@@ -262,6 +262,7 @@
       font-family: config.$font-family;
       background-color: config.$background-dark-clear;
       color: config.$color-dark-secondary;
+      font-size: config.$font-size-body-m;
     }
 
     textarea:focus {
@@ -283,7 +284,7 @@
       max-width: 800px;
       display: flex;
       flex-flow: wrap;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-around !important;
     }
   }
@@ -298,6 +299,27 @@
       flex-flow: wrap;
       align-items: center;
       justify-content: space-around !important;
+
+      address.info-data {
+        .info-data_list {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          margin-bottom: 1.3em;
+          margin-top: 0;
+        }
+      }
+
+      .contact_box_form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3em;
+        flex-direction: column;
+        font-family: "Nunito";
+      }
     }
   }
 }
@@ -437,6 +459,13 @@
           font-weight: 600;
           margin-bottom: 1em;
         }
+
+        input {
+          width: 20em;
+        }
+        textarea {
+          width: 20em;
+        }
       }
     }
   }
@@ -508,6 +537,14 @@
           font-size: config.$font-size-body-xx;
           font-weight: 600;
           margin-bottom: 1em;
+        }
+
+        input {
+          width: 20em;
+        }
+
+        textarea {
+          width: 20em;
         }
       }
     }
