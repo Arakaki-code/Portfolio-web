@@ -73,7 +73,7 @@ function Contact(props) {
       className={["container-contact", isDark ? "dark" : ""].join(" ")}
       id="contact"
       style={
-        isDark ? { backgroundColor: "#3F2A5A" } : { backgroundColor: "#F7C4D2" }
+        isDark ? { backgroundColor: "#382B49" } : { backgroundColor: "#ffdde6" }
       }
     >
       <div className="content-contact">
@@ -153,7 +153,7 @@ function Contact(props) {
             </div>
           </div>
           <form className="contact_box_form" onSubmit={handleSubmit(onEvent)}>
-            <span className="form-text-span">Envie uma mensagem</span>
+            <span className="form-text-span">Entre em contato comigo</span>
             <div className="box-form-item">
               <input
                 type={"text"}

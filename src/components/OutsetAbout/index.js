@@ -12,7 +12,7 @@ function OutsetAbout(props) {
   return (
     <div
       style={
-        isDark ? { backgroundColor: "#3F2A5A" } : { backgroundColor: "#F7C4D2" }
+        isDark ? { backgroundColor: "#382B49" } : { backgroundColor: "#ffdde6" }
       }
       className={["box-about", isDark ? "dark" : ""].join(" ")}
       id="about"
