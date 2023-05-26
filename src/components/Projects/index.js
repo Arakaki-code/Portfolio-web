@@ -12,7 +12,7 @@ export function Projects(props) {
   return (
     <div
       style={
-        isDark ? { backgroundColor: "#1D2024" } : { backgroundColor: "#E2E2E2" }
+        isDark ? { backgroundColor: "#1D2024" } : { backgroundColor: "#eae8e8" }
       }
       className={["box", isDark ? "dark" : ""].join(" ")}
       id="project"
