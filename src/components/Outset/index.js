@@ -19,7 +19,7 @@ function Outset(props) {
             <p>Desenvolvedora web | Front-end</p>
             <UIButton
               component={"a"}
-              href="/mayuri-arakaki-cv2023.pdf"
+              href="/mayuri-cv23.pdf"
               download="Curriculum-mayuri"
               target={"blank"}
             >
