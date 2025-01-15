@@ -56,11 +56,10 @@ function OutsetAbout(props) {
                 <br />
                 Atualmente, como estudante, estou focada em expandir
                 meus conhecimentos e aplicar o que aprendo em projetos criativos
-                e desafiadores. Busco aprimorar minhas habilidades de desenvolvimento e meu objetivo é impactar
-                positivamente com os meus trabalhos. Estou animada com o que o futuro
+                e desafiadores. Busco aprimorar minhas habilidades de desenvolvimento e impactar
+                positivamente com os meus serviços. Estou animada com o que o futuro
                 reserva e determinada a colaborar com pessoas e projetos que compartilhem essa visão.
 
-                Acredito no aprendizado contínuo, na disciplina e evolução.
                 <button className="btn__leia-mais" onClick={toggleMostrarMais}>
                   Ler menos
                 </button>
