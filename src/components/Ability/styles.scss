@@ -1,0 +1,456 @@
+@use "../../styles/config";
+
+.container-ability {
+  width: 100%;
+  padding: 5em 0 5em 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: config.$background-light-clear;
+}
+
+.content-ability {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-ability_box {
+  height: 320px;
+  width: 700px;
+
+  .ability-skill_icon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 2em;
+  }
+
+  .ability_icons {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2em;
+    background-color: config.$color-light-secondary;
+    margin-right: 1em;
+    transition: 0.5s;
+
+    img {
+      width: 30px;
+    }
+  }
+
+  .ability_icons:hover {
+    filter: brightness(140%);
+  }
+
+  .active {
+    background: #f75421;
+  }
+
+  .ability-skill_text {
+    width: 100%;
+
+    .skill_text_item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      background-color: config.$background-light-default;
+      padding: 1.4em 1.4em;
+      border-radius: config.$border-radius-m;
+      box-shadow: config.$box-shadow-center;
+
+      font-family: config.$font-family-sans;
+
+      span {
+        font-size: 28px;
+        color: config.$color-light-secondary;
+        font-weight: config.$font-weight-b;
+        margin-bottom: 0.5em;
+
+      }
+
+      p {
+        font-size: config.$font-size-body-m;
+        color: config.$color-light-primary;
+        font-weight: config.$font-weight-sans-r;
+
+        margin: 0;
+      }
+
+      .devicon-ability {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+      }
+      .devicon-ability_item {
+        font-size: 30px;
+        color: grey;
+        margin-right: 0.5em;
+      }
+
+    }
+
+    .ability-fade-in-down {
+      opacity: 0;
+      animation: fadeIn 0.3s ease-in both;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+}
+
+.dark {
+  .container-ability {
+  
+    background-color: config.$background-dark-clear;
+  }
+  
+  
+  .content-ability_box {
+  
+  
+    .ability_icons {
+      background-color: config.$color-light-secondary;
+  
+    }
+  
+  
+    .ability-skill_text {
+  
+      .skill_text_item {
+  
+        background-color: config.$background-dark-default;
+        border-radius: config.$border-radius-m;
+        box-shadow: config.$box-shadow-center;
+  
+        font-family: config.$font-family-sans;
+  
+        span {
+          font-size: 28px;
+          color: config.$color-dark-primary;
+          font-weight: config.$font-weight-b;
+  
+        }
+  
+        p {
+          font-size: config.$font-size-body-m;
+          color: config.$color-dark-secondary;
+          font-weight: config.$font-weight-sans-r;
+  
+        }
+  
+        .devicon-ability_item {
+          color: config.$color-dark-secondary;
+        }
+  
+      }
+    }
+  }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 945px){
+
+  .container-ability 
+  {
+    padding: 3em 0 3em 0;
+  }
+  .content-ability {
+    width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .content-ability_box {
+    height: 370px;
+    width: 600px;
+
+  }
+
+  .ability-skill_text {
+    width: 100%;
+
+    .skill_text_item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      background-color: config.$background-light-default;
+      padding: 1.4em 1.4em;
+      border-radius: config.$border-radius-m;
+      box-shadow: config.$box-shadow-center;
+
+      font-family: config.$font-family-sans;
+
+      span {
+        font-size: config.$font-size-p !important;
+        font-weight: config.$font-weight-m !important;
+        margin-bottom: 0.5em;
+
+      }
+
+      p {
+        font-size: config.$font-size-body-m;
+        color: config.$color-light-primary;
+        font-weight: config.$font-weight-sans-r;
+
+        margin: 0;
+      }
+
+      .devicon-ability {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+      }
+      .devicon-ability_item {
+        font-size: 30px;
+        color: grey;
+        margin-right: 0.5em;
+      }
+
+    }
+  }
+}
+
+@media  (min-width: 566px) and (max-width: 768px){
+
+  .content-ability_box {
+    height: 368px;
+    width: 560px;
+
+
+  }
+  .content-ability {
+    width: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container-ability 
+  {
+    padding: 2.5em 0 2.5em 0;
+  }
+
+  .ability-skill_text {
+    width: 100%;
+
+    .skill_text_item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      background-color: config.$background-light-default;
+      padding: 1.4em 1.4em;
+      border-radius: config.$border-radius-m;
+      box-shadow: config.$box-shadow-center;
+
+      font-family: config.$font-family-sans;
+
+      span {
+        font-size: config.$font-size-body-xx !important;
+        font-weight: config.$font-weight-m !important;
+        margin-bottom: 0.5em;
+
+      }
+
+      p {
+        font-size: config.$font-size-body-m;
+        color: config.$color-light-primary;
+        font-weight: config.$font-weight-sans-r;
+        text-align: justify;
+
+        margin: 0;
+      }
+
+      .devicon-ability {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+      }
+      .devicon-ability_item {
+        font-size: 30px;
+        color: grey;
+        margin-right: 0.5em;
+      }
+
+    }
+  }
+}
+
+@media (min-width: 446px) and (max-width: 565px){
+  .content-ability_box {
+    height: 350px;
+
+  }
+  .content-ability {
+    width: 430px;
+  }
+
+  .content-ability_box {
+    width: 440px;
+
+  }
+
+  .container-ability 
+  {
+    padding: 2.5em 0 2.5em 0;
+  }
+
+  .ability-skill_text {
+    width: 100%;
+
+    .skill_text_item {
+
+      span {
+        font-size: config.$font-size-body-xx !important;
+        font-weight: config.$font-weight-m !important;
+        margin-bottom: 0.5em;
+
+      }
+
+      p {
+        font-size: config.$font-size-body-p !important;
+        color: config.$color-light-primary;
+        font-weight: config.$font-weight-sans-r;
+        text-align: justify;
+
+        margin: 0;
+      }
+      .devicon-ability_item {
+        font-size: 26px;
+        color: grey;
+        margin-right: 0.5em;
+      }
+
+    }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 445px){
+  .content-ability_box {
+    height: 380px;
+
+  }
+  .content-ability {
+    width: 360px;
+  }
+
+  .container-ability 
+  {
+    padding: 2.5em 0 2.5em 0;
+  }
+
+  .content-ability_box {
+    width: 330px !important;
+
+  }
+
+  .ability-skill_text {
+    width: 100%;
+
+    .skill_text_item {
+
+      span {
+        font-size: config.$font-size-body-xx !important;
+        font-weight: config.$font-weight-m !important;
+        margin-bottom: 0.5em;
+
+      }
+
+      p {
+        font-size: config.$font-size-body-p !important;
+        color: config.$color-light-primary;
+        font-weight: config.$font-weight-sans-r;
+        text-align: justify;
+
+        margin: 0;
+      }
+      .devicon-ability_item {
+        font-size: 26px !important;
+        color: grey;
+        margin-right: 0.5em;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 375px){
+  .content-ability_box {
+    height: 415px;
+
+  }
+  .content-ability {
+    width: 320px;
+  }
+
+  .container-ability 
+  {
+    padding: 2.5em 0 2.5em 0;
+  }
+
+  .ability-skill_text {
+    width: 100%;
+
+    .skill_text_item {
+
+      span {
+        font-size: config.$font-size-body-xx !important;
+        font-weight: config.$font-weight-m !important;
+        margin-bottom: 0.5em;
+
+      }
+
+      p {
+        font-size: config.$font-size-body-p !important;
+        color: config.$color-light-primary;
+        font-weight: config.$font-weight-sans-r;
+        text-align: justify;
+
+        margin: 0;
+      }
+      .devicon-ability_item {
+        font-size: 22px !important;
+        color: grey;
+        margin-right: 0.5em;
+      }
+
+    }
+  }
+}

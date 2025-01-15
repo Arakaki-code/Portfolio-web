@@ -1,0 +1,137 @@
+@use "../../styles/config";
+
+.carousel {
+  overflow: hidden;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.carousel-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin: 5px;
+    border: none;
+    background-color: #C6C2C2;
+
+  }
+
+  button.active {
+    background-color: config.$color-emphasis-light;
+    color: #fff;
+  }
+
+
+  .indicators-arrow {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 160px;
+
+    button {
+      background: transparent;
+
+      
+    }
+  }
+
+  .indicators-ball {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    .indicators-ball_item {
+      height: 15px;
+      border-radius: 100%;
+      width: 15px;
+      cursor: pointer;
+    }
+
+
+  }
+
+  
+}
+
+indicators-arrow-path {
+  width: 45px;
+  cursor: pointer;
+
+}
+
+indicators-arrow-path, path:hover {
+  fill: #000000;
+
+  
+}
+
+.dark {
+  button.active {
+    background-color: config.$color-emphasis-dark;
+    color: #fff;
+  }
+}
+
+@media (min-width: 946px) and (max-width: 1040px){
+
+}
+
+@media (min-width: 769px) and (max-width: 945px){
+  .carousel-item {
+    height: 340px !important;
+  }
+  .indicators .indicators-arrow {
+
+    bottom: 188px;
+}
+}
+
+@media (min-width: 566px) and (max-width: 768px){
+  .carousel-item {
+    height: 300px !important;
+  }
+}
+
+@media (min-width: 446px) and (max-width: 565px){
+
+  .carousel-item {
+    height: 240px !important;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 445px){
+  .carousel-item {
+    height: 240px !important;
+  }
+
+  .indicators .indicators-arrow {
+
+    bottom: 150px;
+}
+}
+
+@media (max-width: 375px){
+  .carousel-item {
+    height: 205px !important;
+  }
+
+  .indicators .indicators-arrow {
+
+    bottom: 135px;
+}
+}
+
